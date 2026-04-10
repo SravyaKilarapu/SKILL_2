@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database Configuration -->
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/s57?useSSL=false&amp;serverTimezone=UTC
+        </property>
+
+        <property name="hibernate.connection.username">
+            root
+        </property>
+
+        <property name="hibernate.connection.password">
+            root
+        </property>
+
+        <!-- Hibernate Properties -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQL5Dialect
+        </property>
+
+        <!-- Use existing database, create only tables -->
+        <property name="hibernate.hbm2ddl.auto">
+            update
+        </property>
+
+        <!-- Disable SQL logs for clean output -->
+        <property name="hibernate.show_sql">
+            false
+        </property>
+
+        <property name="hibernate.format_sql">
+            false
+        </property>
+
+        <!-- Entity Mapping -->
+        <mapping class="com.example.HibernateCRUD.Product"/>
+
+    </session-factory>
+</hibernate-configuration>
+
